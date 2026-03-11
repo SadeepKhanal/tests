@@ -1,0 +1,13 @@
+<h1>Notes</h1>
+<a href="{% url 'note_create' %}">Add Note</a>
+<ul>
+    {% for note in notes %}
+    <li>
+        <strong>{{ note.title }}</strong> - {{ note.content|truncatechars:50 }}
+        <a href="{% url 'note_update' note.pk %}">Edit</a>
+        <a href="{% url 'note_delete' note.pk %}">Delete</a>
+    </li>
+    {% empty %}
+    <li>No notes available.</li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,29 @@
+<!-- templates/patient/patient_form.html -->
+<pre>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Patient Registration</title>
+        {% comment %} <style>
+            .errorlist {
+                color: red;
+            }
+            input,
+            select,
+            textarea {
+                padding: 8px;
+                width: 300px;
+            }
+        </style> {% endcomment %}
+    </head>
+    <body>
+        <h1>Patient Registration Form</h1>
+        <h1>Sadeep Khanal-31</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
+</pre>
